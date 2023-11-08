@@ -18,33 +18,34 @@
     <div class="middle"> <a href="{% url 'CrossOpen'%}" style="text-decoration: none; color:#FFFFFF;"> Cross/Open</a></div>
     <div class="rightp"> <a href="{% url 'IndAdjudicator'%}" style="text-decoration: none; color:rgb(242, 242, 120)"> Independent Adjudicator </a></div>
   </div>
-    <form action="">
+  <form action="{% url 'saveContact3' %}" method="POST">
+    {% csrf_token %}
   <div class="subheading">
    Field marked <span class="redstarbig">* </span> are mandatory
   </div>
   
   <div class="adjudicatorName">
-    <input name = "name" id = "name"  type="text" required>
+    <input name = "name_adjud" id = "name"  type="text" required>
     <label for = "name">Name</label>
   </div>
   <div class="collegeName">
-    <input name = "name" id = "name"  type="text" required>
+    <input name = "institution_name" id = "name"  type="text" required>
     <label for = "name">Name of College/Institution</label>
   </div>
   <div class="contactNo">
-    <input name = "name" id = "name" type="tel" required>
+    <input name = "contact_number" id = "name" type="tel" required>
     <label for = "name">Contact Number</label>
   </div>
   <div class="email">
-    <input name = "name" id = "name" type="text" required>
+    <input name = "email_id_head" id = "name" type="text" required>
     <label for = "name">Email ID</label>
   </div>
   <div class="altContact">
-    <input name = "name" id = "name" type="tel" required>
+    <input name = "alt_poc_number" id = "name" type="tel" required>
     <label for = "name">Alternate Contact Number</label>
   </div>
   <div class="altEmail">
-    <input name = "name" id = "name" type="text" required>
+    <input name = "alt_poc_email_id" id = "name" type="text" required>
     <label for = "name">Alternate Email ID</label>
   </div>
 

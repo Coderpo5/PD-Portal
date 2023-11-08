@@ -3,6 +3,8 @@ from django.core.validators import (MinValueValidator)
 from django.core.exceptions import ValidationError
 from phonenumber_field.modelfields import PhoneNumberField
 from django.contrib.auth.models import AbstractUser
+from django import forms
+
 
 class User(AbstractUser):
     phone_number = PhoneNumberField();
@@ -15,24 +17,24 @@ class institutionalTeam_Contingent(models.Model):
     contact_number = PhoneNumberField()
     email_id_deb_soc = models.EmailField(max_length = 255)
     alt_poc_name = models.CharField(max_length = 255)
-    alt_poc_number = PhoneNumberField()
+    # alt_poc_number = PhoneNumberField()
     alt_poc_email_id = models.EmailField(max_length = 255)
-    feedback_queries = models.CharField(max_length = 500)
+    # feedback_queries = models.CharField(max_length = 500, null=True, blank=True)
     def __str__(self):
-        return self.name_Institution
+        return '%s' % (self.name_Institution)       
 
 class Cross_Open(models.Model):
     name_Team = models.CharField(max_length = 255)
     team_leader_name = models.CharField(max_length = 255)
     adjudicator_Slots =  models.IntegerField()
     contact_number = PhoneNumberField()
-    email_id_head = models.EmailField(max_length = 255)
+    email_id_head = models.EmailField(max_length = 255, null=True, blank=True)
     alt_poc_name = models.CharField(max_length = 255)
     alt_poc_number = PhoneNumberField()
     alt_poc_email_id = models.EmailField(max_length = 255)
-    feedback_queries = models.CharField(max_length = 500)
+    # feedback_queries = models.CharField(max_length = 500, null=True, blank=True)
     def __str__(self):
-        return self.name_Institution
+        return '%s' % (self.name_Team)
 
 class Independent_Adjudicator(models.Model):
     name_adjud = models.CharField(max_length = 255)
@@ -41,9 +43,9 @@ class Independent_Adjudicator(models.Model):
     email_id_head = models.EmailField(max_length = 255)
     alt_poc_number = PhoneNumberField()
     alt_poc_email_id = models.EmailField(max_length = 255)
-    feedback_queries = models.CharField(max_length = 500)
+    # feedback_queries = models.CharField(max_length = 500)
     def __str__(self):
-        return self.name_adjud
+        return '%s' % (self.name_adjud)
     
 
 # class Competition(models.Model):

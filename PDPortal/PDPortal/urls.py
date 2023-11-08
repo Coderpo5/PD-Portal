@@ -24,11 +24,12 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    # path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls),
     path('', views.home, name = "HomePage"),
     path('institute-team/', views.instTeam, name = "InstituteTeamCont"),
     path('saveContact/', views.saveContact, name = "saveContact"),
     path('saveContact2/', views.saveContact2, name = "saveContact2"),
+    path('saveContact3/', views.saveContact3, name = "saveContact3"),
     path('cross-open/', views.CrossOpen, name = "CrossOpen"),
     path('indAdjudicator/', views.indAdjudicator, name = "IndAdjudicator")
     
