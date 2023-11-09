@@ -227,49 +227,50 @@
           <div class="middle" onclick = "reg2()"><a style="text-decoration: none; color:#FFFFFF; cursor: pointer;"> Cross/Open</a></div>
           <div class="rightp" onclick = "reg3()"> <a style="text-decoration: none; color:#FFFFFF; cursor:pointer;"> Independent Adjudicator </a></div>
         </div>
-          <form action="">
-        <div class="subheading">
-         Field marked <span class="redstarbig">* </span> are mandatory
-        </div>
-        
-        <div class="institutionName inputs">
-          <input name = "name" id = "name"  type="text" required>
-          <label for = "name">Name of Institution</label>
-        </div>
-        <div class="noOfTeam inputs">
-          <input name = "name" id = "name"  type="number" required>
-          <label for = "name">Number of team slot(s) required</label>
-        </div>
-        <div class="noOfAdjudicator inputs">
-          <input name = "name" id = "name" type="number" required>
-          <label for = "name">Number of adjudicator slot(s) required</label>
-        </div>
-        <div class="teamRep inputs">
-          <input name = "name" id = "name" type="text" required>
-          <label for = "name">Team(s) representative name</label>
-        </div>
-        <div class="contactNo inputs">
-          <input name = "name" id = "name" type="tel" required>
-          <label for = "name">Contact Number</label>
-        </div>
-        <div class="email email-inputs">
-          <input type="text" id="multiline-placeholder" required>
-          <label for="multiline-placeholder">
+        <form action="{% url 'saveContact' %}" method="POST">
+          {% csrf_token %}
+          <div class="subheading">
+            Field marked <span class="redstarbig">* </span> are mandatory
+          </div>
+      
+          <div class="institutionName">
+            <input name="name_Institution" id="name" type="text" required>
+            <label for="name">Name of Institution</label>
+          </div>
+          <div class="noOfTeam">
+            <input name="team_Slots" id="name" type="number" required>
+            <label for="name">Number of team slot(s) required</label>
+          </div>
+          <div class="noOfAdjudicator">
+            <input name="adjudicator_Slots" id="name" type="number" required>
+            <label for="name">Number of adjudicator slot(s) required</label>
+          </div>
+          <div class="teamRep">
+            <input name="team_rep_name" id="name" type="text" required>
+            <label for="name">Team(s) representative name</label>
+          </div>
+          <div class="contactNo">
+            <input name="contact_number" id="name" type="tel" required>
+            <label for="name">Contact Number</label>
+          </div>
+          <div class="email">
+            <input type="email" id="multiline-placeholder" name="email_id_deb_soc" required>
+            <label for="multiline-placeholder">
               Email ID<br>
               Preferably Debate Society of Institution
-          </label>
-        </div>
-        <div class="pocName inputs">
-          <input name = "name" id = "name" type="text" required>
-          <label for = "name">Alternate point of contact(Name)</label>
-        </div>
-        <div class="pocEmail inputs">
-          <input name = "name" id = "name" type="text" required>
-          <label for = "name">Alternate point of contact(Email ID)</label>
-        </div>
+            </label>
+          </div>
+          <div class="pocName">
+            <input name="alt_poc_name" id="name" type="text" required>
+            <label for="name">Alternate point of contact(Name)</label>
+          </div>
+          <div class="pocEmail">
+            <input name="alt_poc_email_id" id="name" type="email" required>
+            <label for="name">Alternate point of contact(Email ID)</label>
+          </div>
       
-        <button> REGISTER </button>
-      </form>
+          <button> REGISTER </button>
+        </form>
     </div>
 
 
@@ -283,46 +284,47 @@
           <div class="middle" onclick = "reg2()"><a style="text-decoration: none; color:rgb(242, 242, 120); cursor: pointer;"> Cross/Open</a></div>
         <div class="rightp" onclick = "reg3()"> <a style="text-decoration: none; color:#FFFFFF; cursor:pointer;"> Independent Adjudicator </a></div>
       </div>
-        <form action="">
-      <div class="subheading">
-       Field marked <span class="redstarbig">* </span> are mandatory
-      </div>
-      
-      <div class="teamName inputs">
-        <input name = "name" id = "name"  type="text" required>
-        <label for = "name">Name of Team</label>
-      </div>
-      <div class="teamLeaderName inputs">
-        <input name = "name" id = "name"  type="text" required>
-        <label for = "name">Name of Team Leader</label>
-      </div>
-      <div class="noOfAdjudicator inputs">
-        <input name = "name" id = "name" type="number" required>
-        <label for = "name">Number of Adjudicator slot(s) required</label>
-      </div>
-      <div class="contactNo inputs">
-        <input name = "name" id = "name" type="tel" required>
-        <label for = "name">Contact Number</label>
-      </div>
-      <div class="email inputs">
-        <input type="text" id="name" type = "text" required>
-        <label for="name">E-mail ID</label>
-      </div>
-      <div class="pocName inputs">
-        <input name = "name" id = "name" type="text" required>
-        <label for = "name">Alternate point of contact(Name)</label>
-      </div>
-      <div class="pocContact inputs">
-        <input name = "name" id = "name" type="tel" required>
-        <label for = "name">Alternate point of contact (Contact)</label>
-      </div>
-      <div class="pocEmail inputs">
-        <input name = "name" id = "name" type="text" required>
-        <label for = "name">Alternate point of contact(Email ID)</label>
-      </div>
+      <form action="{% url 'saveContact2' %}" method="POST">
+        {% csrf_token %}
+        <div class="subheading">
+          Field marked <span class="redstarbig">* </span> are mandatory
+        </div>
     
-      <button> REGISTER </button>
-    </form>
+        <div class="teamName">
+          <input name="name_Team" id="name" type="text" required>
+          <label for="name">Name of Team</label>
+        </div>
+        <div class="teamLeaderName">
+          <input name="team_leader_name" id="name" type="text" required>
+          <label for="name">Name of Team Leader</label>
+        </div>
+        <div class="noOfAdjudicator">
+          <input name="adjudicator_Slots" id="name" type="number" required>
+          <label for="name">Number of Adjudicator slot(s) required</label>
+        </div>
+        <div class="contactNo">
+          <input name="contact_number" id="name" type="tel" required>
+          <label for="name">Contact Number</label>
+        </div>
+        <div class="email">
+          <input name="email_id_head" id="name" type="text" required>
+          <label for="name">E-mail ID</label>
+        </div>
+        <div class="pocName">
+          <input name="alt_poc_name" id="name" type="text" required>
+          <label for="name">Alternate point of contact(Name)</label>
+        </div>
+        <div class="pocContact">
+          <input name="alt_poc_number" id="name" type="tel" required>
+          <label for="name">Alternate point of contact (Contact)</label>
+        </div>
+        <div class="pocEmail">
+          <input name="alt_poc_email_id" id="name" type="text" required>
+          <label for="name">Alternate point of contact(Email ID)</label>
+        </div>
+    
+        <button> REGISTER </button>
+      </form>
   </div> 
 
   <div class = "independentAdjudicator">    
@@ -335,33 +337,34 @@
       <div class="middle" onclick = "reg2()"><a style="text-decoration: none; color:#FFFFFF; cursor: pointer;"> Cross/Open</a></div>
       <div class="rightp" onclick = "reg3()"> <a style="text-decoration: none; color:rgb(242, 242, 120); cursor:pointer;"> Independent Adjudicator </a></div>
     </div>
-      <form action="">
+    <form action="{% url 'saveContact3' %}" method="POST">
+      {% csrf_token %}
     <div class="subheading">
      Field marked <span class="redstarbig">* </span> are mandatory
     </div>
     
-    <div class="adjudicatorName inputs">
-      <input name = "name" id = "name"  type="text" required>
+    <div class="adjudicatorName">
+      <input name = "name_adjud" id = "name"  type="text" required>
       <label for = "name">Name</label>
     </div>
-    <div class="collegeName inputs">
-      <input name = "name" id = "name"  type="text" required>
+    <div class="collegeName">
+      <input name = "institution_name" id = "name"  type="text" required>
       <label for = "name">Name of College/Institution</label>
     </div>
-    <div class="contactNo inputs">
-      <input name = "name" id = "name" type="tel" required>
+    <div class="contactNo">
+      <input name = "contact_number" id = "name" type="tel" required>
       <label for = "name">Contact Number</label>
     </div>
-    <div class="email inputs">
-      <input name = "name" id = "name" type="text" required>
+    <div class="email">
+      <input name = "email_id_head" id = "name" type="text" required>
       <label for = "name">Email ID</label>
     </div>
-    <div class="altContact inputs">
-      <input name = "name" id = "name" type="tel" required>
+    <div class="altContact">
+      <input name = "alt_poc_number" id = "name" type="tel" required>
       <label for = "name">Alternate Contact Number</label>
     </div>
-    <div class="altEmail inputs">
-      <input name = "name" id = "name" type="text" required>
+    <div class="altEmail">
+      <input name = "alt_poc_email_id" id = "name" type="text" required>
       <label for = "name">Alternate Email ID</label>
     </div>
   

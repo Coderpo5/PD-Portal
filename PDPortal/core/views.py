@@ -1,6 +1,8 @@
-from django.shortcuts import render
-from core.models import institutionalTeam_Contingent
-from core.models import Cross_Open
+from django.shortcuts import render, redirect
+from .models import institutionalTeam_Contingent, Independent_Adjudicator
+from .models import Cross_Open
+from django import forms
+
 
 def home(request):
     return render(request, 'core/HomePage.html',)
@@ -14,9 +16,9 @@ def saveContact(request):
         contact_number = request.POST.get('contact_number')
         email_id_deb_soc = request.POST.get('email_id_deb_soc')
         alt_poc_name = request.POST.get('alt_poc_name')
-        alt_poc_number = request.POST.get('alt_poc_number')
+        # alt_poc_number = request.POST.get('alt_poc_number')
         alt_poc_email_id = request.POST.get('alt_poc_email_id')
-        feedback_queries = request.POST.get('feedback_queries')
+        # feedback_queries = request.POST.get('feedback_queries')
         en = institutionalTeam_Contingent(name_Institution = name_Institution, 
                                           team_Slots = team_Slots,
                                           adjudicator_Slots = adjudicator_Slots,
@@ -24,11 +26,13 @@ def saveContact(request):
                                           contact_number = contact_number,
                                           email_id_deb_soc = email_id_deb_soc,
                                           alt_poc_name = alt_poc_name,
-                                          alt_poc_number = alt_poc_number,
-                                          alt_poc_email_id = alt_poc_email_id,
-                                          feedback_queries = feedback_queries)
-        en.save();
-    return render(request, "core/HomePage.html")
+                                        #   alt_poc_number = alt_poc_number,
+                                          alt_poc_email_id = alt_poc_email_id)
+                                        #   feedback_queries = feedback_queries)
+        en.save()
+        return render(request, "core/HomePage.html")
+    else:
+        return render(request, "core/HomePage.html", {'forms': en})
     
 def saveContact2(request):
     if request.method=="POST":
@@ -40,7 +44,7 @@ def saveContact2(request):
         alt_poc_name = request.POST.get('alt_poc_name')
         alt_poc_number = request.POST.get('alt_poc_number')
         alt_poc_email_id = request.POST.get('alt_poc_email_id')
-        feedback_queries = request.POST.get('feedback_queries')
+        # feedback_queries = request.POST.get('feedback_queries')
         en = Cross_Open(name_Team = name_Team, 
                         team_leader_name = team_leader_name,
                         adjudicator_Slots = adjudicator_Slots,
@@ -48,10 +52,33 @@ def saveContact2(request):
                         email_id_head = email_id_head,
                         alt_poc_name = alt_poc_name,
                         alt_poc_number = alt_poc_number,
-                        alt_poc_email_id = alt_poc_email_id,
-                        feedback_queries = feedback_queries)
-        en.save();
-    return render(request, "core/HomePage.html")
+                        alt_poc_email_id = alt_poc_email_id)
+                        # feedback_queries = feedback_queries)
+        en.save()
+        return render(request, "core/HomePage.html")
+    else: 
+        return render(request, "core/HomePage.html", {'forms': en})
+    
+def saveContact3(request):
+    if request.method=="POST":
+        name_adjud = request.POST.get('name_adjud')
+        institution_name = request.POST.get('institution_name')
+        contact_number =  request.POST.get('contact_number')
+        email_id_head = request.POST.get('email_id_head')
+        alt_poc_number = request.POST.get('alt_poc_number')
+        alt_poc_email_id = request.POST.get('alt_poc_email_id')
+        # feedback_queries = request.POST.get('feedback_queries')
+        en = Independent_Adjudicator(name_adjud = name_adjud, 
+                        institution_name = institution_name,
+                        contact_number = contact_number,
+                        email_id_head = email_id_head,
+                        alt_poc_number = alt_poc_number,
+                        alt_poc_email_id = alt_poc_email_id)
+                        # feedback_queries = feedback_queries)
+        en.save()
+        return render(request, "core/HomePage.html")
+    else: 
+        return render(request, "core/HomePage.html", {'forms': en})
 
 
 def instTeam(request):
@@ -62,4 +89,34 @@ def CrossOpen(request):
 
 def indAdjudicator(request):
     return render(request, 'core/independentAdjudicator.html',)
-# Create your views here.
+
+# def register1(request):
+#     if request.method == 'POST':
+#         form = institutionalTeam_Contingent(request.POST)
+#         if form.is_valid():
+#             form.save()
+#             return redirect('HomePage')
+#     else:
+#         form = institutionalTeam_Contingent()
+#     return render(request, 'saveContact', {'form' : form})
+
+# def register2(request):
+#     if request.method == 'POST':
+#         form = Cross_Open(request.POST)
+#         if form.is_valid():
+#             form.save()
+#             return redirect('HomePage')
+#     else:
+#         form = Cross_Open()
+#     return render(request, 'saveContact2', {'form' : form})
+
+# def register3(request):
+#     if request.method == 'POST':
+#         form = Independent_Adjudicator(request.POST)
+#         if form.is_valid():
+#             form.save()
+#             return redirect('HomePage')
+#     else:
+#         form = Independent_Adjudicator()
+#     return render(request, 'saveContact3')
+    
