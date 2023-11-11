@@ -492,11 +492,13 @@ label {
 
 input{  font-family: 'Sansation', sans-serif;   }
 
-.inputs{position:relative;}
-.inputs input{position:relative;z-index:9;background:transparent;}
-.inputs label{position:absolute;left:0;top:3.5vh;z-index:1;}
-.inputs label::after{content:"*";color:red;}
+.inputs, .phone-inputs{position:relative;}
+.inputs, .phone-inputs input{position:relative;z-index:9;background:transparent;}
+.inputs, .phone-inputs label{position:absolute;left:0;top:3.5vh;z-index:1;}
+.inputs, .phone-inputs label::after{content:"*";color:red;}
 input[required]:valid + label{display: none;}
+
+.phone-inputs label{position:absolute;left:67px;top:1.5vh;z-index:1;}
 
 .email-inputs {position:relative;}
 .email-inputs input{position:relative;z-index:9;background:transparent;}
@@ -504,7 +506,7 @@ input[required]:valid + label{display: none;}
 .email-inputs label::after{content:"*";color:red;}
 input[required]:valid + label{display: none;}
 
-.inputs, .email-inputs{
+.inputs, .email-inputs, .phone-inputs{
     border-bottom: 0.8px  solid;
     width: 95%;
     color: white;
@@ -783,10 +785,10 @@ footer{
     display:none;
 }
 
-.inputs label{position:absolute;left:0;top:4vh;z-index:1; font-size: 2.5vw;}
+.inputs, .phone-inputs label{position:absolute;left:0;top:4vh;z-index:1; font-size: 2.5vw;}
 .email-inputs label{position:absolute;left:0;top:2vh;z-index:1; font-size: 2.5vw;}
-.inputs, .email-inputs {height:10vw;}
-.inputs input[type=text], input[type=tel], input[type=number] {top: -0.5vh; margin-top: 1.2vh;}
+.inputs, .email-inputs, .phone-inputs {height:10vw;}
+.inputs, .phone-inputs input[type=text], input[type=tel], input[type=number] {top: -0.5vh; margin-top: 1.2vh;}
 .email-inputs input[type=text], input[type=tel], input[type=number] {top: -2vh; margin-top: 1.2vh;}
 }
 
