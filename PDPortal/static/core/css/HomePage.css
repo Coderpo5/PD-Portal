@@ -234,6 +234,21 @@ nav{
     top: 1vw;
     height: 7vw;
     width: 7vw;
+    transition: transform o.3s ease-out;
+}
+
+.All_content_image:hover {
+    transform: scale(1.1);
+}
+
+.navterms{
+    transition: color 0.3s ease-in-out;
+    text-decoration: none; 
+    color:#C2C2CC;
+}
+
+.navterms:hover{
+    color: #DAD55B;
 }
 
 .heading{
