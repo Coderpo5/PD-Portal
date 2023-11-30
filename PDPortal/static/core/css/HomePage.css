@@ -18,8 +18,8 @@ nav{
     position: absolute;
     gap: 13vw;
     width:100%;
-    height:9vh;
-    background-color:  #030A06;
+    height:13vh;
+    background-color: #0D1716;
     font-family:'SansationLight',sans-serif;
     font-weight: 700;
     font-size: 1vw;
@@ -98,7 +98,7 @@ nav{
   .AlcheringaText{
   font-family: 'Sansation',sans-serif;
   color: #EBF1F9;
-  font-size: 2vw;
+  font-size: 1.7vw;
   font-weight: 400;
   }
   .navlinks{
@@ -135,7 +135,7 @@ nav{
     width: 100%;
     color: white;
     position: relative;
-    top: 9vh;
+    top: 13vh;
     background-color: #030A06;
     display:flex;
     gap: 0.01vw;
@@ -150,7 +150,7 @@ nav{
   
   .Alcheringa24{
     position: relative;
-    top: 4vh;
+    top: 32px;
     left: 12vw;
     font-size: 2.2vw;
     font-weight: 400;
@@ -163,11 +163,12 @@ nav{
     font-size: 4.3vw;
     line-height: 5.5vw;
     font-family:'Sansation',sans-serif;
+    top: 19px;
   }
   .PDintro{
     position: relative;
     left:12vw;
-    top:-3vh;
+    top:9px;
     font-weight: 400;
     font-family:'Sansation',sans-serif;
     font-size: 1.6vw;
@@ -630,19 +631,20 @@ input[required]:valid + label{display: none;}
     .navbar{
     gap: 10vw;
     width:100%;
-    height:5vh;
+    height:11vh;
     }
     .alcherLogo{
-        left: 0vw;
+        left: 5vw;
     }
       
       .alcherLogo img{
-        height: 4.5vw;
-        width: 4.2vw;
+        height: 5.5vw;
+        width: 5.2vw;
+        /* margin-left: 25vw; */
       }
       
       .AlcheringaText{
-      font-size: 2vw;
+      font-size: 4vw;
       font-weight: 400;
       }
       .navlinks a:not(.registerButton a){
@@ -651,20 +653,27 @@ input[required]:valid + label{display: none;}
 
       
       .registerButton{
-        width:11vw;
+        width:22vw;
         position:relative;
         top: 0.1vw;
-        font-size: 2.3vw;      
+        font-size: 4vw; 
+        left: 14vw;
+        height: 5vh;
       }
 
     .mobile-menu-icon {
         display: block; /* Display the mobile menu icon on mobile */
+        /* margin-right: 19vw; */
     }
 
     .intro{
-        top: 5vh;
+        top: 11vh;
         height: 60vh;
       }
+
+.introcontent{
+    margin-left: -4vw;
+}
       
 .Alcheringa24{
 top: 4vh;
@@ -683,6 +692,10 @@ line-height: 10vw;
     font-size: 2.6vw;
 }
 
+.Grey_Borders_content, .White_Borders_content{
+    padding: 2% 8% 16% 7%;
+}
+
 .Highlight_content, .Prizes_content, .Registration_Fees_content, .Adjudicators_content, .Team_content{
     align-items: center;
     flex-direction: column;
@@ -691,35 +704,42 @@ line-height: 10vw;
 .All_Contents_Head{
     height: 6vw;
     font-size: 3.5vw;
-    top: -1vh;
+    margin-top: 11=vh;
 }
+
+/* .about{
+    margin-top: 50vw;
+
+} */
+
 .About_content_content{
     width: 100%;
     text-align: left;
 }
 .About_description{
-    font-size:3.3vw;
-    top: 0vw;
+    font-size:3.8vw;
+    top: 5vh;
 }
 
 .All_content_image, .Adjudicator_image, .Team_image{
-    top: 7vw;
-    height: 15vw;
-    width: 15vw;
+    top: 4vw;
+    height: 22vw;
+    width: 22vw;
 }
 
 .heading{
-    font-size: 4vw;
-    top: 12vw;
+    font-size: 5.7vw;
+    top: 1.5vw;
 }
 .description{
-    font-size:3.3vw;
-    line-height: 2.5vh;
-    top: 12vw;
+    font-size:4.7vw;
+    /* line-height: 2.5vh; */
+    top: 0vw;
 }
 
 .content_content{
     width: 60%;
+    margin-top: 4vh;
 }
 
 .Adjudicator_name{
