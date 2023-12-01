@@ -96,12 +96,6 @@ nav{
     filter: contrast(0.2);
   }
   
-  .AlcheringaText{
-  font-family: 'Sansation',sans-serif;
-  color: #EBF1F9;
-  font-size: 1.7vw;
-  font-weight: 400;
-  }
   .navlinks{
     display: flex;
     justify-content: space-evenly;
@@ -157,9 +151,20 @@ nav{
     font-weight: 400;
     font-family:'Sansation',sans-serif;
   }
+  .MainHeading{
+    position: relative;
+    display: flex;
+  }
+  .MainHeading img{
+    left: 12vw;
+    top: 3vw;
+    position: relative;
+    height: 12vw;
+    width: 8vw;
+  }
   .PD{
     position: relative;
-    left:20vw;
+    left:15vw;
     font-weight: 700;
     font-size: 4.3vw;
     line-height: 5.5vw;
@@ -278,7 +283,7 @@ nav{
     width: 7.5vw;
     position: relative;
     top: 8vh;
-    left: 4vw;
+    left: 5vw;
     border-radius:50%;
     background-color: #B2B2B2;
 }
@@ -295,8 +300,8 @@ nav{
     height: 7.5vw;
     width: 7.5vw;
     position: relative;
-    top: 8vh;
-    left: 5vw;
+    top: 0vh;
+    left: 6vw;
     border-radius:50%;
     background-color: #B2B2B2;
 }
@@ -429,10 +434,15 @@ footer{
     margin-left: 15vw;
     top: 18vh;
     width: 70vw;
-    height: 85vh;
     font-family: 'Sansation', sans-serif;
     display: none;
     z-index: 100;
+}
+.InstituteTeamCont, .CrossOpen{
+    height: 120vh;
+}
+.independentAdjudicator{
+    height: 100vh;
 }
 
 
@@ -500,7 +510,7 @@ form{
 }
 *{box-sizing: border-box;}
 
-input[type=text],input[type=tel],input[type=number]{
+input[type=text],input[type=number], .iti{
     width: 100%;
   padding-top: 15px;
   padding-bottom: 5px;
@@ -512,31 +522,25 @@ input[type=text],input[type=tel],input[type=number]{
   outline: none;
 }
 
+::placeholder{
+    color:white;
+    font-size:1.3vw;
+}
+
 /* input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 } */
 
-label {
-    color: white;
-    font-size: 1.3vw;
-    position: relative;
-    display: block;
-}
-
-input{  font-family: 'Sansation', sans-serif;   }
+input{  font-family: 'Sansation', sans-serif; color: white; font-size: 1.3vw;   }
 
 .inputs{position:relative;}
 .inputs input{position:relative;z-index:9;background:transparent;}
-.inputs label{position:absolute;left:0;top:3.5vh;z-index:1;}
-.inputs label::after{content:"*";color:red;}
 input[required]:valid + label{display: none;}
 
 .email-inputs {position:relative;}
 .email-inputs input{position:relative;z-index:9;background:transparent;}
-.email-inputs label{position:absolute;left:0;top:2.3vh;z-index:1;}
-.email-inputs label::after{content:"*";color:red;}
 input[required]:valid + label{display: none;}
 
 .inputs, .email-inputs{
@@ -653,10 +657,12 @@ input[required]:valid + label{display: none;}
     }
       
       .alcherLogo img{
-        height: 5.5vw;
-        width: 5.2vw;
+        height: 9vw;
+        width: 6vw;
         /* margin-left: 25vw; */
       }
+
+      .MainHeading img{display:none;}
       
       .AlcheringaText{
       font-size: 4vw;
@@ -668,12 +674,12 @@ input[required]:valid + label{display: none;}
 
       
       .registerButton{
-        width:22vw;
+        width:18vw;
         position:relative;
         top: 0.1vw;
-        font-size: 4vw; 
+        font-size: 3.5vw; 
         left: 14vw;
-        height: 5vh;
+        height: 4vh;
       }
 
     .mobile-menu-icon {
@@ -693,7 +699,7 @@ input[required]:valid + label{display: none;}
 .Alcheringa24{
 top: 4vh;
 left: 12vw;
-font-size: 3.3vw;
+font-size: 4vw;
 }
 .PD{
 left:7vh;
@@ -837,10 +843,12 @@ img.twitter{left:11.3vw;}
     display:none;
 }
 
-.inputs label{position:absolute;left:0;top:4vh;z-index:1; font-size: 2.5vw;}
-.email-inputs label{position:absolute;left:0;top:2vh;z-index:1; font-size: 2.5vw;}
+::placeholder{font-size:2vw;}
+
 .inputs, .email-inputs {height:10vw;}
-.inputs input[type=text], input[type=tel], input[type=number] {top: -0.5vh; margin-top: 1.2vh;}
-.email-inputs input[type=text], input[type=tel], input[type=number] {top: -2vh; margin-top: 1.2vh;}
+.inputs input[type=text], input[type=number] {margin-top: 1.7vh;}
+.iti{margin-top:1.7vh;}
+.iti__flag-container {    font-size: 2vw;}
+.email-inputs input[type=text], input[type=number] {margin-top: 1.7vh;}
 }
 
