@@ -16,7 +16,7 @@ nav{
     justify-content: space-around;
     align-items: center;
     position: absolute;
-    gap: 13vw;
+    gap: 31vw;
     width:100%;
     height:13vh;
     background-color: #0D1716;
@@ -91,8 +91,9 @@ nav{
 }
   
   .alcherLogo img{
-    height: 3vw;
-    width: 2.8vw;
+    height: 4vw;
+    width: 3vw;
+    filter: contrast(0.2);
   }
   
   .AlcheringaText{
@@ -308,7 +309,6 @@ nav{
 
 .end{
     width: 100%;
-    height: 43vh;
     /* background-color:  #030A06; */
 }
 .APD{
