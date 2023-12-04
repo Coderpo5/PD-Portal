@@ -68,7 +68,7 @@ nav{
         display: none; /* Initially hide the links */
         background-color:  #03070A; /* Background color of the dropdown */
         position: absolute;
-        top: 4.9vh; /* Adjust the distance from the mobile menu icon */
+        top: 8.9vh; /* Adjust the distance from the mobile menu icon */
         left: 0;
         width: 100%;
         padding: 10px;
@@ -161,10 +161,10 @@ nav{
   }
   .MainHeading img{
     left: 12vw;
-    top: 3vw;
+    top: 5vw;
     position: relative;
-    height: 12vw;
-    width: 8vw;
+    height: 10vw;
+    width: 7vw;
   }
   .PD{
     position: relative;
@@ -173,7 +173,7 @@ nav{
     font-size: 4.3vw;
     line-height: 5.5vw;
     font-family:'Sansation',sans-serif;
-    top: 19px;
+    top: 12px;
   }
   .PDintro{
     position: relative;
@@ -386,29 +386,33 @@ nav{
     left: -8vw;
 }
 
-img.bottom{
-    position: relative;
+.logo{position: relative; display:flex; justify-content: space-between;
+        gap: 2vw; left:1vw;}
+
+.logo .bottom{
     height: 2.5vw;
-    width: 21vw;
-    left: -0.5vw;
-    top: -0.6vw;
-    z-index: 0;
+    width: 2.5vw;
+    position: relative;
+    border-radius:50%;
+    z-index:0;
+    background-color: #B2B2B2;
 }
 
 img.top{
     position: relative;
     height: 2vw;
     width: 2vw;
-    top: -3vw;
+    top: -3.3vw;
     z-index: 1;
 }
-img.instagram{left:-2.2vw;}
-img.youtube{left:-1vw;}
-img.threads{left:0.2vw;}
-img.facebook{left:1.6vw;}
-img.linkedin{left:2.9vw;}
-img.twitter{left:4.2vw;}
+img.instagram{left:-3.3vw;}
+img.youtube{left:-0.5vw;}
+img.threads{left:2.4vw;}
+img.facebook{left:5.4vw;}
 
+.Follow_head{
+    position:relative; left:1vw;
+}
 .contactFollowContent{
     display: flex;
     position: relative;
@@ -676,7 +680,7 @@ input[required]:valid + label{display: none;}
         /* margin-left: 25vw; */
       }
 
-      .MainHeading img{display:none;}
+      .MainHeading img{top: 14vw; height: 15vw; width:10vw;}
       
       .AlcheringaText{
       font-size: 4vw;
@@ -693,7 +697,6 @@ input[required]:valid + label{display: none;}
         top: 0.1vw;
         font-size: 3.5vw; 
         left: 14vw;
-        height: 4vh;
       }
 
     .mobile-menu-icon {
@@ -716,9 +719,9 @@ left: 12vw;
 font-size: 4vw;
 }
 .PD{
-left:7vh;
+left:20%;
 top: 3vh;
-font-size: 9.4vw;
+font-size: 7.4vw;
 line-height: 10vw;
 }
 
@@ -842,32 +845,31 @@ line-height: 10vw;
     width: 80vw;   
 }
 
+
+.logo .bottom{
+height: 5vw;
+width: 5vw;
+left:8vw;
+}
+
 img.top{
-  height: 4vw;
-  width: 4vw;
-  top: -7.5vw;
+height: 4vw;
+width: 4vw;
+top: -7.5vw;
 }
-img.bottom{
-    height: 5vw;
-    width: 42vw;
-    left: -0.5vw;
-    top: -2.6vw;
-}
-img.instagram{left:-0.7vw;}
-img.youtube{left:1.5vw;}
-img.threads{left:4.5vw;}
-img.facebook{left:6.6vw;}
-img.linkedin{left:8.9vw;}
-img.twitter{
-    left:26.3vw;
-    top: -12.5vw;
-}
+img.instagram{left:6.1vw;}
+img.youtube{left:8.1vw;}
+img.threads{left:10.1vw;}
+img.facebook{left:12.1vw;}
 
 .contactFollowContent{    gap: 25%; }
 .ContactFollow{
     width: 35%;
     font-size: 3.3vw;
 }
+
+.Follow_head{left:8.5vw;}
+
 .copyright{
     display:none;
 }
@@ -882,6 +884,21 @@ img.twitter{
 
 form{
     padding-bottom: 8vh;
+}
+
+.header2::after{height: 2px;}
+
+.InstituteTeamCont .header2::after {
+    left: 4vw;
+    width: 36%;
+}
+.CrossOpen .header2::after {
+    left: 35.5vw;
+    width: 17%;
+}
+.independentAdjudicator .header2::after {
+    left: 52vw;
+    width: 30%;
 }
 
 ::placeholder{font-size:2vw;}
