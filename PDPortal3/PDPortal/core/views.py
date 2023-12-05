@@ -13,6 +13,7 @@ def saveContact(request):
         team_Slots = request.POST.get('team_Slots')
         adjudicator_Slots =  request.POST.get('adjudicator_Slots')
         team_rep_name = request.POST.get('team_rep_name')
+        country_code = request.POST.get('country_code')
         contact_number = request.POST.get('contact_number')
         email_id_deb_soc = request.POST.get('email_id_deb_soc')
         alt_poc_name = request.POST.get('alt_poc_name')
@@ -24,6 +25,7 @@ def saveContact(request):
                                           adjudicator_Slots = adjudicator_Slots,
                                           team_rep_name = team_rep_name,
                                           contact_number = contact_number,
+                                          country_code = country_code,
                                           email_id_deb_soc = email_id_deb_soc,
                                           alt_poc_name = alt_poc_name,
                                         #   alt_poc_number = alt_poc_number,
@@ -39,9 +41,11 @@ def saveContact2(request):
         name_Team = request.POST.get('name_Team')
         team_leader_name = request.POST.get('team_leader_name')
         adjudicator_Slots =  request.POST.get('adjudicator_Slots')
+        country_code = request.POST.get('country_code')
         contact_number = request.POST.get('contact_number')
         email_id_head = request.POST.get('email_id_head')
         alt_poc_name = request.POST.get('alt_poc_name')
+        alt_country_code = request.POST.get('alt_country_code')
         alt_poc_number = request.POST.get('alt_poc_number')
         alt_poc_email_id = request.POST.get('alt_poc_email_id')
         # feedback_queries = request.POST.get('feedback_queries')
@@ -49,9 +53,11 @@ def saveContact2(request):
                         team_leader_name = team_leader_name,
                         adjudicator_Slots = adjudicator_Slots,
                         contact_number = contact_number,
+                        country_code = country_code,
                         email_id_head = email_id_head,
                         alt_poc_name = alt_poc_name,
                         alt_poc_number = alt_poc_number,
+                        alt_country_code = alt_country_code,
                         alt_poc_email_id = alt_poc_email_id)
                         # feedback_queries = feedback_queries)
         en.save()
@@ -63,16 +69,20 @@ def saveContact3(request):
     if request.method=="POST":
         name_adjud = request.POST.get('name_adjud')
         institution_name = request.POST.get('institution_name')
+        country_code = request.POST.get('country_code')
         contact_number =  request.POST.get('contact_number')
         email_id_head = request.POST.get('email_id_head')
+        alt_country_code = request.POST.get('alt_country_code')
         alt_poc_number = request.POST.get('alt_poc_number')
         alt_poc_email_id = request.POST.get('alt_poc_email_id')
         # feedback_queries = request.POST.get('feedback_queries')
         en = Independent_Adjudicator(name_adjud = name_adjud, 
                         institution_name = institution_name,
                         contact_number = contact_number,
+                        country_code = country_code,
                         email_id_head = email_id_head,
                         alt_poc_number = alt_poc_number,
+                        alt_country_code = alt_country_code,
                         alt_poc_email_id = alt_poc_email_id)
                         # feedback_queries = feedback_queries)
         en.save()

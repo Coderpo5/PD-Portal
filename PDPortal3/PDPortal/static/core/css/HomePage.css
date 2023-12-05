@@ -529,7 +529,7 @@ form{
 *{box-sizing: border-box;}
 
 input[type=text],input[type=number], .iti{
-    width: 100%;
+    width: 200%;
   padding-top: 15px;
   padding-bottom: 5px;
   margin-top: 3.2vh;
@@ -539,6 +539,7 @@ input[type=text],input[type=number], .iti{
   color: white;
   outline: none;
 }
+
 
 ::placeholder{
     color:white;
@@ -662,6 +663,46 @@ input[required]:valid + label{display: none;}
     border: none;
     margin-top: 2.2vh;
     font-family: 'Sansation', sans-serif;
+}
+
+.xyz{
+    display: flex;
+    border-bottom: 0.8px  solid white;
+    width: 95%;
+    /* color: white; */
+    font-weight: 400;
+}
+
+.option{
+    /* height: 2vh; */
+    
+    margin-top: 3vh;
+    display: inline;
+    /* top: 5vh; */
+    /* padding-top: 4vh; */
+    /* background-color: green; */
+}
+
+#dropdown{
+    background-color: rgb(101, 227, 101);
+    height: 5vh;
+    /* width: 4vw; */
+}
+
+.contactNo{
+    display: inline;
+    margin-left: 1vw;
+    border: none;
+} 
+
+.pocContact{
+    border: none;
+    margin-left: 1vw;
+}
+
+.altContact{
+    border: none;
+    margin-left: 1vw;
 }
 
 @media (max-width: 425px) {
@@ -902,6 +943,10 @@ form{
 }
 
 ::placeholder{font-size:2vw;}
+
+.option{
+    margin-top: 1.7vh;
+}
 
 .inputs, .email-inputs {height:10vw;}
 .inputs input[type=text], input[type=number] {margin-top: 1.7vh;}
