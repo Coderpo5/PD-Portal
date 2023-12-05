@@ -468,7 +468,13 @@
     } else {
       navlinks.style.display = 'block';
     }
+
+    let navToggle = document.querySelector('.mobile-menu-icon')
+  let bars = document.querySelectorAll('.bar')
+  bars.forEach(bar => bar.classList.toggle('x'))
   }
+
+  navToggle.addEventListener('click', toggleMobileMenu)
 
   function reg() {
     document.getElementsByClassName("InstituteTeamCont")[0].style.display = "block";
