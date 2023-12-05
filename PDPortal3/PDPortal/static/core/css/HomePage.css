@@ -528,7 +528,7 @@ form{
 *{box-sizing: border-box;}
 
 input[type=text],input[type=number], .iti{
-    width: 200%;
+    width: 100%;
   padding-top: 15px;
   padding-bottom: 5px;
   margin-top: 3.2vh;
@@ -945,6 +945,11 @@ form{
 
 .option{
     margin-top: 1.7vh;
+}
+
+.altContact{
+    width: 100%;
+    margin-top: -1.5vh;
 }
 
 .inputs, .email-inputs {height:10vw;}
