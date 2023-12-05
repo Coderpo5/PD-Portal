@@ -677,15 +677,17 @@ input[required]:valid + label{display: none;}
     
     margin-top: 3vh;
     display: inline;
+    border: none;
     /* top: 5vh; */
     /* padding-top: 4vh; */
     /* background-color: green; */
 }
 
 #dropdown{
-    background-color: rgb(101, 227, 101);
+    background-color: #07231e;
     height: 5vh;
     /* width: 4vw; */
+    border: none;
 }
 
 .contactNo{
@@ -702,6 +704,14 @@ input[required]:valid + label{display: none;}
 .altContact{
     border: none;
     margin-left: 1vw;
+}
+
+.option select {
+    background-color:  #07231e;
+}
+
+.option select option:checked {
+    background-color:  #152423;
 }
 
 @media (max-width: 425px) {
