@@ -711,6 +711,7 @@ input[required]:valid + label{display: none;}
 
 .option select {
     background-color:  #07231e;
+    outline: none;
 }
 
 .option select option:checked {
